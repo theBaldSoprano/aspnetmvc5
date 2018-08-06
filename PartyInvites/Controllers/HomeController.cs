@@ -12,7 +12,8 @@ namespace PartyInvites.Controllers
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "good morning" : "good afternoon";
+            ViewBag.siski = hour < 12 ? "good morning" : "good afternoon";
+            ViewBag.temp = "here is the new temporary";
             return View();
         }
         public ViewResult RsvpForm()

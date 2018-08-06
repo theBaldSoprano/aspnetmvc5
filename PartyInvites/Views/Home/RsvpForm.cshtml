@@ -1,11 +1,8 @@
 ﻿@model PartyInvites.Models.GuestResponse
-
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,7 +11,7 @@
 <body>
     @using (Html.BeginForm())
     {
-        <p>ur nameie: @Html.TextBoxFor(u => u.Name)</p>
+        <p>ur nameie is: @Html.TextBoxFor(x => x.Name)</p>
         <p>ur eimeil: @Html.TextBoxFor(u => u.Email)</p>
         <p>ur phoney: @Html.TextBoxFor(u => u.Phone)</p>
         <p>
