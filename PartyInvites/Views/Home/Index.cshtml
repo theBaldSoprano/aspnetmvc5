@@ -8,17 +8,28 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <title>Index</title>
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none
+        }
+
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        @ViewBag.siski sahs
-        <p>
-            We're going to have an exciting party.<br />
-            (To do: sell it better. Add pictures or something.)<br />
-            @ViewBag.temp
-        </p>
-        @Html.ActionLink("RSVP Now", "RsvpForm")
+    <div class="text-center">
+        
+            <h2>We're going to have an exciting party.</h2>
+      <h3>And you r envited</h3>
+        <div class="btn btn-info">
+            @Html.ActionLink("RSVP Now", "RsvpForm")
+        </div>
     </div>
 </body>
 </html>
