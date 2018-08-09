@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyAuto.GetterSetter {
     class Person {
+
         //variations of getters and setters
         private string _name;
 
