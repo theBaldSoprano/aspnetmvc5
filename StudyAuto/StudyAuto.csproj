@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GetterSetter\Person.cs" />
+    <Compile Include="Inheritance\Animal.cs" />
     <Compile Include="MyString\Dictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
