@@ -50,7 +50,10 @@
     <Compile Include="GetterSetter\Person.cs" />
     <Compile Include="Inheritance\Animal.cs" />
     <Compile Include="MyString\Dictionary.cs" />
-    <Compile Include="OOP\Constructors.cs" />
+    <Compile Include="oop\Constants.cs" />
+    <Compile Include="oop\Constructors.cs" />
+    <Compile Include="oop\StaticClass.cs" />
+    <Compile Include="oop\StaticCunstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tuple\Program.cs" />
   </ItemGroup>

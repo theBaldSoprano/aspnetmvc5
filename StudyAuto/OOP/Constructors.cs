@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StudyAuto.OOP.Constructors {
+namespace StudyAuto.oop.Constructors {
     class Constructors {
-        public static void Main(string[] ) {
+        public static void Main(string[] fgf) {
             Person p = new Person { name = "tom" };
         }
     }
