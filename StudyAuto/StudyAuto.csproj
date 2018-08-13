@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>StudyAuto.EntryPoint</StartupObject>
+    <StartupObject>StudyAuto.Tuple.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,7 +50,9 @@
     <Compile Include="GetterSetter\Person.cs" />
     <Compile Include="Inheritance\Animal.cs" />
     <Compile Include="MyString\Dictionary.cs" />
+    <Compile Include="OOP\Constructors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tuple\Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

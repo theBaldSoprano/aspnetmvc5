@@ -7,7 +7,7 @@ using System.Threading;
 namespace FizzBuzz {
     class Program {
         static void Main(string[] args) {
-            List<string> result = new LinkedList();
+            List<string> result = new List<string>();
             Stopwatch stopwatch = new Stopwatch();
             Process.GetCurrentProcess().ProcessorAffinity = new IntPtr(2); // Use only the second core 
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;

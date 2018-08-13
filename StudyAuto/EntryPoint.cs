@@ -25,6 +25,12 @@ namespace StudyAuto {
             }
 
 
+            object o = "ddd";
+
+            Console.WriteLine("type is " + o.GetType().Name);
+
+            Convert.ToInt32(Console.ReadLine());
+
 
             Console.ReadKey();
         }
