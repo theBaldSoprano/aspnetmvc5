@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudyAuto.overriding {
     class IsVirtuelNecessary {
@@ -24,11 +20,24 @@ namespace StudyAuto.overriding {
         }
     }
     class Animal {
+        //AND HERE is the virtual property
+        public virtual string Name { set; get; }
         public virtual string shout() {
             return ("its animal");
         }
     }
     class Dog : Animal {
+        private string _name;
+        //and here is the OVERRIDE of property
+        public override string Name {
+            set {
+                _name = value + " the Dog";
+            }
+            get {
+                return _name;
+            }
+        }
+
         public override string shout() {
             return "its dog";
         }
