@@ -46,10 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="casting\CastReloading.cs" />
+    <Compile Include="casting\UsingCast.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GetterSetter\Person.cs" />
     <Compile Include="Inheritance\Animal.cs" />
     <Compile Include="MyString\Dictionary.cs" />
+    <Compile Include="null\Null.cs" />
     <Compile Include="oop\Constants.cs" />
     <Compile Include="oop\Constructors.cs" />
     <Compile Include="oop\StaticClass.cs" />

@@ -6,6 +6,18 @@ using System.Threading.Tasks;
 
 namespace StudyAuto.Inheritance {
     public abstract class Animal {
+        public static void Main(string[] ss) {
+            Animal al = new Fish("nn", 4, 4, ConsoleColor.Black);
+            Fish ff = al as Fish;
+
+           if(ff is Animal) {
+                Console.WriteLine("it is animal");
+            } else {
+                Console.WriteLine("it is not");
+            }
+
+
+        }
 
         public string Name { get; set; }
         public int X { get; set; }
