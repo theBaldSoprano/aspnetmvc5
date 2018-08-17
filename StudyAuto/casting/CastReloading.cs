@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyAuto.casting {
     class CastReloading {
-        public static void Main(string[] dd) {
+        public static void Gain(string[] dd) {
             Dimention d = new Dimention(4, 6, 6);
             //THIS IS IMPLICIT cast as written below
             Volume v = d;
