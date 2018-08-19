@@ -10,12 +10,10 @@ using StudyAuto.generics;
 namespace StudyAuto {
     class EntryPoint {
         public static void Main(String[] args) {
-
-            Account<int> a = new Account<int>();
-
-
-
             
+
+
+
         }
     }
 }

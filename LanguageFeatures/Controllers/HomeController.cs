@@ -14,12 +14,68 @@ namespace LanguageFeatures.Controllers {
 
         public ViewResult AutoProperty() {
             Product product = new Product();
-            product.Name = "key";
-            string foo = product.Name;
+            product.name = "key";
+            string foo = product.name;
             return View(
                     "Result",
                     (object)String.Format("Prod name: {0}", foo)
                     );
+        }
+
+        public ViewResult UseExtension() {
+            ShoppingCart cart = new ShoppingCart {
+                products = new List<Product> {
+                    new Product {name = "Kayak", price = 275M},
+                    new Product {name = "Lifejacket", price = 48.95M},
+                    new Product {name = "Soccer ball", price = 19.50M},
+                    new Product {name = "Corner flag", price = 34.95M}
+                    }
+            };
+            decimal total = cart.totalPrices();
+            return View("Result",
+                        (object)String.Format("Total: {0:c}", total));
+        }
+
+        public ViewResult UseExtensionEnumerable() {
+            IEnumerable<Product> products = new ShoppingCart {
+                products = new List<Product> {
+new Product {name = "Kayak", price = 275M},
+new Product {name = "Lifejacket", price = 48.95M},
+new Product {name = "Soccer ball", price = 19.50M},
+new Product {name = "Corner flag", price = 34.95M}
+}
+            };
+            // create and populate an array of Product objects
+            Product[] productArray = {
+new Product {name = "Kayak", price = 275M},
+new Product {name = "Lifejacket", price = 48.95M},
+new Product {name = "Soccer ball", price = 19.50M},
+new Product {name = "Corner flag", price = 34.95M}
+};
+            decimal foo = products.totalPrices();
+            decimal bar = productArray.totalPrices();
+
+            return View("Result",
+                (object)String.Format("cart total: {0}, array total: {1}", foo, bar));
+        }
+        public ViewResult UseFilterExtensionMethod() {
+            IEnumerable<Product> products = new ShoppingCart {
+                products = new List<Product> {
+new Product {name = "Kayak", price = 275M},
+new Product {name = "Lifejacket", price = 48.95M, category = "Soccer"},
+new Product {name = "Soccer ball", price = 19.50M},
+new Product {name = "Corner flag", price = 34.95M}
+}
+            };
+
+            decimal foo = 0;
+            foreach(Product p in products.FilterByCategory("Soccer")) {
+                foo += p.price;
+            }
+          
+
+            return View("Result",
+                (object)String.Format("cart total: {0}", foo));
         }
     }
 }
