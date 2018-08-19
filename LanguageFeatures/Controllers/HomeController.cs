@@ -112,5 +112,29 @@ namespace LanguageFeatures.Controllers {
             }
             return View("Result", (object)sb.ToString());
         }
+
+        public ViewResult FindProductsWithLInQ() {
+            var foo = new[] {
+                new {name = "apple", price = 11},
+                new {name = "hat", price = 4},
+                new {name = "pool]]", price = 77}
+            };
+            var bar = foo.OrderByDescending(p => p.price)
+                .Take(2)
+                .Select(p => new { p.name, p.price });
+            StringBuilder result = new StringBuilder();
+            foreach(var p in bar) {
+                result.AppendLine($"name is {p.name} and price is {p.price}{Environment.NewLine}");
+            }
+            return View("Result",
+                (object)result.ToString());
+        }
+
+        public ViewResult UseAsyncMethod() {
+            return View("Result", 
+                (object)MyAsyncMethods.GetPageLength().Result.ToString());
+        }
+
+        
     }
 }
