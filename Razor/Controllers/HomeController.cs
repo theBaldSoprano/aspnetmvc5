@@ -5,10 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Razor.Controllers
-{
-    public class HomeController : Controller
-    {
+namespace Razor.Controllers {
+    public class HomeController : Controller {
         Product myProduct = new Product {
             ProductID = 1,
             Name = "Kayak",
@@ -17,8 +15,11 @@ namespace Razor.Controllers
             Price = 275M
         };
         // GET: Home
-        public ActionResult Index()
-        {
+        public ActionResult Index() {
+            return View(myProduct);
+        }
+
+        public ActionResult NameAndPrice() {
             return View(myProduct);
         }
     }
