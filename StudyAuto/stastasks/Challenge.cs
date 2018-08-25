@@ -136,7 +136,5 @@ namespace StudyAuto.stastasks {
             long sum2 = (last * (last + 1) / 2);
             return sum2 - sum1;
         }
-
-
     }
 }
