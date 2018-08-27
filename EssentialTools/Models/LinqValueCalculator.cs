@@ -6,9 +6,11 @@ using System.Web;
 namespace EssentialTools.Models {
     public class LinqValueCalculator : IValueCalculator {
         private IDiscountHelper discounter;
+        private static int counter = 0;
 
         public LinqValueCalculator(IDiscountHelper dishelper) {
             this.discounter = dishelper;
+            System.Diagnostics.Debug.WriteLine(string.Format("Instance {0} created", ++counter));
         }
 
         public decimal ValueProducts(IEnumerable<Product> products) {

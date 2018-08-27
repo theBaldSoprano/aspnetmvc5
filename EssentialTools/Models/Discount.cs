@@ -8,8 +8,15 @@ namespace EssentialTools.Models {
         decimal ApplyDiscount(decimal totalParam);
     }
     public class DefaultDiscountHelper : IDiscountHelper {
+        public decimal DiscountSize { get; set; }
+        private decimal DiscountSize2;
+
+        public DefaultDiscountHelper(decimal discountSize2) {
+            DiscountSize2 = discountSize2;
+        }
+
         public decimal ApplyDiscount(decimal totalParam) {
-            return (totalParam - (10M / 100M * totalParam));
+            return (totalParam - (DiscountSize * DiscountSize2 / 100M * totalParam));
         }
     }
 }
