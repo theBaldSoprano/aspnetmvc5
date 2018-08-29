@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>StudyAuto.EntryPoint</StartupObject>
+    <StartupObject>StudyAuto.stastasks.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,7 +61,13 @@
     <Compile Include="overriding\IsVirtuelNecessary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="shadowing\HowToShadow.cs" />
-    <Compile Include="stastasks\Challenge.cs" />
+    <Compile Include="stastasks\ch\Challenge.cs" />
+    <Compile Include="stastasks\Program.cs" />
+    <Compile Include="stastasks\RoleInTask.cs" />
+    <Compile Include="stastasks\Roles.cs" />
+    <Compile Include="stastasks\Tasks.cs" />
+    <Compile Include="stastasks\UserInRole.cs" />
+    <Compile Include="stastasks\Users.cs" />
     <Compile Include="Tuple\Program.cs" />
   </ItemGroup>
   <ItemGroup>
